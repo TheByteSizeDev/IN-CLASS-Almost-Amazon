@@ -1,4 +1,6 @@
+import { getAuthors } from '../api/authorData';
 import { booksOnSale, getBooks } from '../api/bookData';
+import { showAuthors } from '../pages/authors';
 import { showBooks } from '../pages/books';
 import { signOut } from '../utils/auth';
 
@@ -26,6 +28,7 @@ const navigationEvents = () => {
   // 3. If the array is empty because there are no authors, make sure to use the emptyAuthor function
   document.querySelector('#authors').addEventListener('click', () => {
     console.warn('CLICKED AUTHORS');
+    getAuthors().then(showAuthors);
   });
 
   // STRETCH: SEARCH
