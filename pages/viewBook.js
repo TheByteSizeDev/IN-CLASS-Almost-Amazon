@@ -1,6 +1,7 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
+// Book details
 const viewBook = (obj) => {
   clearDom();
 
