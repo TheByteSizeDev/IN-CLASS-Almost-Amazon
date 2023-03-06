@@ -1,6 +1,7 @@
 import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 
+// USING THIS FORM FOR BOTH CREATE AND UPDATE
 const addAuthorForm = () => {
   clearDom();
   const domString = `
@@ -16,6 +17,10 @@ const addAuthorForm = () => {
       <div class="form-group">
         <label for="title">Email</label>
         <input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email" required>
+      </div>
+      <div class="form-group">
+        <label for="favorite">Favorite?</label>
+        <input type="checkbox" class="form-check-input" id="favorite" aria-describedby="Favorite">
       </div>
       <button type="submit" class="btn btn-primary mt-3">Submit Author</button>
     </form>`;
